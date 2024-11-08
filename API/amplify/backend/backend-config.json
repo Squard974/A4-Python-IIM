@@ -1,0 +1,128 @@
+{
+  "api": {
+    "users": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "UserManagement"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "manageEmail"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "UserManagement": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "apiimutils"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn",
+            "StreamArn"
+          ],
+          "category": "storage",
+          "resourceName": "users"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "apiimutils": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "LambdaLayer"
+    },
+    "manageEmail": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn",
+            "StreamArn"
+          ],
+          "category": "storage",
+          "resourceName": "users"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_UserManagement_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "UserManagement"
+        }
+      ]
+    },
+    "AMPLIFY_function_UserManagement_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "UserManagement"
+        }
+      ]
+    },
+    "AMPLIFY_function_apiimutils_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "apiimutils"
+        }
+      ]
+    },
+    "AMPLIFY_function_apiimutils_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "apiimutils"
+        }
+      ]
+    },
+    "AMPLIFY_function_manageEmail_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "manageEmail"
+        }
+      ]
+    },
+    "AMPLIFY_function_manageEmail_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "manageEmail"
+        }
+      ]
+    }
+  },
+  "storage": {
+    "users": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
+    }
+  }
+}

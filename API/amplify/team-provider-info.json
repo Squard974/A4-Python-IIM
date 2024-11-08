@@ -1,0 +1,37 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-apiim-dev-d5df9-authRole",
+      "UnauthRoleArn": "arn:aws:iam::108782078940:role/amplify-apiim-dev-d5df9-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::108782078940:role/amplify-apiim-dev-d5df9-authRole",
+      "Region": "eu-west-1",
+      "DeploymentBucketName": "amplify-apiim-dev-d5df9-deployment",
+      "UnauthRoleName": "amplify-apiim-dev-d5df9-unauthRole",
+      "StackName": "amplify-apiim-dev-d5df9",
+      "StackId": "arn:aws:cloudformation:eu-west-1:108782078940:stack/amplify-apiim-dev-d5df9/12897400-9ab9-11ef-af91-0ac37a712dd3",
+      "AmplifyAppId": "d15eqgbt6bkn5x"
+    },
+    "categories": {
+      "function": {
+        "UserManagement": {
+          "deploymentBucketName": "amplify-apiim-dev-d5df9-deployment",
+          "s3Key": "amplify-builds/UserManagement-49554854455a4f526579-build.zip"
+        },
+        "manageEmail": {
+          "deploymentBucketName": "amplify-apiim-dev-d5df9-deployment",
+          "s3Key": "amplify-builds/manageEmail-79743653687a51374341-build.zip"
+        },
+        "apiimutils": {
+          "deploymentBucketName": "amplify-apiim-dev-d5df9-deployment",
+          "s3Key": "amplify-builds/apiimutils-LambdaLayerVersion038011e5-build.zip"
+        }
+      },
+      "api": {
+        "users": {}
+      },
+      "storage": {
+        "users": {}
+      }
+    }
+  }
+}
