@@ -7,17 +7,21 @@ export type AmplifyDependentResourcesAttributes = {
     }
   },
   "function": {
-    "UserManagement": {
+    "addUser": {
       "Arn": "string",
       "LambdaExecutionRole": "string",
       "LambdaExecutionRoleArn": "string",
       "Name": "string",
       "Region": "string"
     },
-    "apiimutils": {
-      "Arn": "string"
+    "apiiim997f3029": {
+      "Arn": "string",
+      "LambdaExecutionRole": "string",
+      "LambdaExecutionRoleArn": "string",
+      "Name": "string",
+      "Region": "string"
     },
-    "manageEmail": {
+    "userManagment": {
       "Arn": "string",
       "LambdaExecutionRole": "string",
       "LambdaExecutionRoleArn": "string",

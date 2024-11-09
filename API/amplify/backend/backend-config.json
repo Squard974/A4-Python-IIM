@@ -8,7 +8,7 @@
             "Arn"
           ],
           "category": "function",
-          "resourceName": "UserManagement"
+          "resourceName": "userManagment"
         },
         {
           "attributes": [
@@ -16,7 +16,7 @@
             "Arn"
           ],
           "category": "function",
-          "resourceName": "manageEmail"
+          "resourceName": "apiiim997f3029"
         }
       ],
       "providerPlugin": "awscloudformation",
@@ -24,16 +24,9 @@
     }
   },
   "function": {
-    "UserManagement": {
+    "addUser": {
       "build": true,
       "dependsOn": [
-        {
-          "attributes": [
-            "Arn"
-          ],
-          "category": "function",
-          "resourceName": "apiimutils"
-        },
         {
           "attributes": [
             "Name",
@@ -47,12 +40,23 @@
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     },
-    "apiimutils": {
+    "apiiim997f3029": {
       "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn",
+            "StreamArn"
+          ],
+          "category": "storage",
+          "resourceName": "users"
+        }
+      ],
       "providerPlugin": "awscloudformation",
-      "service": "LambdaLayer"
+      "service": "Lambda"
     },
-    "manageEmail": {
+    "userManagment": {
       "build": true,
       "dependsOn": [
         {
@@ -70,51 +74,51 @@
     }
   },
   "parameters": {
-    "AMPLIFY_function_UserManagement_deploymentBucketName": {
+    "AMPLIFY_function_addUser_deploymentBucketName": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "UserManagement"
+          "resourceName": "addUser"
         }
       ]
     },
-    "AMPLIFY_function_UserManagement_s3Key": {
+    "AMPLIFY_function_addUser_s3Key": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "UserManagement"
+          "resourceName": "addUser"
         }
       ]
     },
-    "AMPLIFY_function_apiimutils_deploymentBucketName": {
+    "AMPLIFY_function_apiiim997f3029_deploymentBucketName": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "apiimutils"
+          "resourceName": "apiiim997f3029"
         }
       ]
     },
-    "AMPLIFY_function_apiimutils_s3Key": {
+    "AMPLIFY_function_apiiim997f3029_s3Key": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "apiimutils"
+          "resourceName": "apiiim997f3029"
         }
       ]
     },
-    "AMPLIFY_function_manageEmail_deploymentBucketName": {
+    "AMPLIFY_function_userManagment_deploymentBucketName": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "manageEmail"
+          "resourceName": "userManagment"
         }
       ]
     },
-    "AMPLIFY_function_manageEmail_s3Key": {
+    "AMPLIFY_function_userManagment_s3Key": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "manageEmail"
+          "resourceName": "userManagment"
         }
       ]
     }

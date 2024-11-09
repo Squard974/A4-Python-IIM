@@ -3,14 +3,14 @@
   "paths": {
     "/manageUser": {
       "name": "/manageUser",
-      "lambdaFunction": "UserManagement",
+      "lambdaFunction": "userManagment",
       "permissions": {
         "setting": "open"
       }
     },
     "/getToken": {
       "name": "/getToken",
-      "lambdaFunction": "manageEmail",
+      "lambdaFunction": "apiiim997f3029",
       "permissions": {
         "setting": "open"
       }

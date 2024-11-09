@@ -1,29 +1,29 @@
 {
   "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-apiim-dev-d5df9-authRole",
-      "UnauthRoleArn": "arn:aws:iam::108782078940:role/amplify-apiim-dev-d5df9-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::108782078940:role/amplify-apiim-dev-d5df9-authRole",
+      "AuthRoleName": "amplify-apiiim-dev-7edc2-authRole",
+      "UnauthRoleArn": "arn:aws:iam::908027392248:role/amplify-apiiim-dev-7edc2-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::908027392248:role/amplify-apiiim-dev-7edc2-authRole",
       "Region": "eu-west-1",
-      "DeploymentBucketName": "amplify-apiim-dev-d5df9-deployment",
-      "UnauthRoleName": "amplify-apiim-dev-d5df9-unauthRole",
-      "StackName": "amplify-apiim-dev-d5df9",
-      "StackId": "arn:aws:cloudformation:eu-west-1:108782078940:stack/amplify-apiim-dev-d5df9/12897400-9ab9-11ef-af91-0ac37a712dd3",
-      "AmplifyAppId": "d15eqgbt6bkn5x"
+      "DeploymentBucketName": "amplify-apiiim-dev-7edc2-deployment",
+      "UnauthRoleName": "amplify-apiiim-dev-7edc2-unauthRole",
+      "StackName": "amplify-apiiim-dev-7edc2",
+      "StackId": "arn:aws:cloudformation:eu-west-1:908027392248:stack/amplify-apiiim-dev-7edc2/6e179970-9cec-11ef-8c40-02433dd3b451",
+      "AmplifyAppId": "d2wfl3gwr2aowo"
     },
     "categories": {
       "function": {
-        "UserManagement": {
-          "deploymentBucketName": "amplify-apiim-dev-d5df9-deployment",
-          "s3Key": "amplify-builds/UserManagement-49554854455a4f526579-build.zip"
+        "userManagment": {
+          "deploymentBucketName": "amplify-apiiim-dev-7edc2-deployment",
+          "s3Key": "amplify-builds/userManagment-4c73544259592b513465-build.zip"
         },
-        "manageEmail": {
-          "deploymentBucketName": "amplify-apiim-dev-d5df9-deployment",
-          "s3Key": "amplify-builds/manageEmail-79743653687a51374341-build.zip"
+        "apiiim997f3029": {
+          "deploymentBucketName": "amplify-apiiim-dev-7edc2-deployment",
+          "s3Key": "amplify-builds/apiiim997f3029-47315354734e4f7a4950-build.zip"
         },
-        "apiimutils": {
-          "deploymentBucketName": "amplify-apiim-dev-d5df9-deployment",
-          "s3Key": "amplify-builds/apiimutils-LambdaLayerVersion038011e5-build.zip"
+        "addUser": {
+          "deploymentBucketName": "amplify-apiiim-dev-7edc2-deployment",
+          "s3Key": "amplify-builds/addUser-696a6743353453504a41-build.zip"
         }
       },
       "api": {
